@@ -87,18 +87,44 @@ a:hover { color: #036; }
 */
 
 
+#twitter { float: right; }
+#social { float: left; }
+#main {
+	width: 50%;
+	padding-left: 5em;
+}
+header {
+	font-family: "Georgia";
+	font-size: 150%;
+	padding-left: 1em;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	padding-right: 0em;
+}
+
+nav#social header {
+	font-size: 130%;
+	padding-left: 1em;
+	padding-bottom: .5em;
+	padding-top: 1em;
+	padding-right: 0em;
+	border: 0;
+}
 
 
+nav#social ul {
+	padding-left: 2em;;
+}
 
+nav#social ul li {
+	font-family: "Georgia";
+	font-size: 120%;
+	margin: 1em;
+}
 
-
-
-
-
-
-
-
-
+nav#social ul li img {
+	margin-right: 1em;
+}
 
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .hidden { display: none; visibility: hidden; }
