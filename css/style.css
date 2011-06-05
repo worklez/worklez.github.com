@@ -87,7 +87,8 @@ a:hover { color: #036; }
 */
 
 
-#twitter { float: right; }
+#twitter_aside { float: right; }
+#twitter_aside header { font-size: 130%; }
 #social { float: left; }
 #main {
 	width: 50%;
@@ -118,7 +119,6 @@ nav#social ul {
 
 nav#social ul li {
 	font-family: "Georgia";
-	font-size: 120%;
 	margin: 1em;
 }
 

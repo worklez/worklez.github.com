@@ -1,8 +1,8 @@
 .twitted {
 	width: 16em;
 	margin-bottom: 1.5em;
-	border: 1px solid #888;
 	overflow: hidden;
+	font-family: "Georgia";
 }
 
 .twitted h2 {
@@ -35,16 +35,6 @@
 .twitted ul#twitter_update_list li span {
 	/* tweet content */
 	display: block;
-}
-
-.twitted ul#twitter_update_list li span a {
-	/* links in tweet content */
-	color: #00f;
-}
-
-.twitted ul#twitter_update_list li a {
-	/* timestamp link */
-	color: #f00;
 }
 
 .twitted ul#twitter_update_list li.firstTweet {
