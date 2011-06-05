@@ -89,7 +89,7 @@ a:hover { color: #036; }
 
 #twitter_aside { float: right; }
 #twitter_aside header { font-size: 130%; }
-#social { float: left; }
+#main > section { float: left; }
 #main {
 	width: 50%;
 	padding-left: 5em;
@@ -103,7 +103,7 @@ header {
 	padding-right: 0em;
 }
 
-nav#social header {
+#main section header {
 	font-size: 130%;
 	padding-left: 1em;
 	padding-bottom: .5em;
@@ -113,17 +113,21 @@ nav#social header {
 }
 
 
-nav#social ul {
+#main section ul {
 	padding-left: 2em;;
+	list-style-type: none;
+	margin: 0;
 }
 
-nav#social ul li {
+#main section ul li {
 	font-family: "Georgia";
 	margin: 1em;
 }
 
-nav#social ul li img {
+#main section ul li img {
 	margin-right: 1em;
+	width: 16px;
+	height: 16px;
 }
 
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
