@@ -91,7 +91,7 @@ a:hover { color: #036; }
 #twitter_aside header { font-size: 130%; }
 #main > section { float: left; }
 #main {
-	width: 50%;
+	width: 50em;
 	padding-left: 5em;
 }
 header {
