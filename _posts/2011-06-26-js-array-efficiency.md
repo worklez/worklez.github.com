@@ -11,19 +11,22 @@ tags : [dev, javascript, wtf]
 Как эффективнее (по времени выполнения) склеить два массива в JavaScript?
 Мне приходят в голову два варианта:
 
-	foo = foo.concat(bar)
-{:javascript}
+{% highlight js %}
+foo = foo.concat(bar)
+{% endhighlight %}
 
 и
 
-	bar.forEach(function(x) { foo.push(x) })
-{:javascript}
+{% highlight js %}
+bar.forEach(function(x) { foo.push(x) })
+{% endhighlight %}
 
 Оба варианта, прямо скажем, не идеальны.
 Идельным вариантом, на мой взгляд, было бы что-то вроде
 
-	foo.append(bar)
-{:javascript}
+{% highlight js %}
+foo.append(bar)
+{% endhighlight %}
 
 в результате которого `foo` бы сначала увеличился до нужного размера (или больше)
 а затем отработало быстрое копирование. Что-то подобное возможно?

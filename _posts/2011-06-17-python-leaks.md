@@ -27,35 +27,38 @@ tags : [dev, python, leaks]
 
 Miniquiz: что не так в этом коде?
 
-	doc = libxml2.parseFile("test.xml")
-	res = doc.xpathEval("/foo//bar")
-	doc.freeDoc()
-{:python}
+{% highlight python %}
+doc = libxml2.parseFile("test.xml")
+res = doc.xpathEval("/foo//bar")
+doc.freeDoc()
+{% endhighlight %}
 
 Вроде бы всё в порядке.
 
 Посмотрим на `xpathEval()` подробнее:
 
-	def xpathEval(self, expr):
-	  doc = self.doc
-	  if doc == None:
-	    return None
-	  ctxt = doc.xpathNewContext()
-	  ctxt.setContextNode(self)
-	  res = ctxt.xpathEval(expr)
-	  ctxt.xpathFreeContext()
-	  return res
-{:python}
+{% highlight python %}
+def xpathEval(self, expr):
+  doc = self.doc
+  if doc == None:
+    return None
+  ctxt = doc.xpathNewContext()
+  ctxt.setContextNode(self)
+  res = ctxt.xpathEval(expr)
+  ctxt.xpathFreeContext()
+  return res
+{% endhighlight %}
 
 Теперь рассмотрим `ctxt.xpathEval()`, который вызывается из предыдущего метода:
 
-	def xpathEval(self, str):
-	  """Evaluate the XPath Location Path in the given context. """
-	  ret = libxml2mod.xmlXPathEval(str, self._o)
-	  if ret is None:
-	    raise xpathError('xmlXPathEval() failed')
-	  return xpathObjectRet(ret)
-{:python}
+{% highlight python %}
+def xpathEval(self, str):
+  """Evaluate the XPath Location Path in the given context. """
+  ret = libxml2mod.xmlXPathEval(str, self._o)
+  if ret is None:
+    raise xpathError('xmlXPathEval() failed')
+  return xpathObjectRet(ret)
+{% endhighlight %}
 
 Вот оно! Как только по XPath-запросу ничего не нашлось, что может вполне соответствовать бизнес-логике,
 выкидывается весёлое исключение и контекст `ctxt` не освобождается (не вызывается `ctxt.xpathFreeContext()`).
