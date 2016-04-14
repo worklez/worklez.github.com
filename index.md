@@ -5,17 +5,13 @@ title: Hello World!
 {% include JB/setup %}
 
 ## Social
-![](http://twitter.com/favicon.ico) [Twitter](https://twitter.com/worklez)
+<img src="https://twitter.com/favicon.ico" width="16"> [Twitter](https://twitter.com/worklez)
 
-![](http://linkedin.com/favicon.ico) [LinkedIn](http://linkedin.com/in/worklez)
+<img src="https://linkedin.com/favicon.ico" width="16"> [LinkedIn](http://linkedin.com/in/worklez)
 
-![](http://github.com/favicon.ico) [GitHub](https://github.com/worklez)
+<img src="https://github.com/favicon.ico" width="16"> [GitHub](https://github.com/worklez)
 
-![](http://moikrug.ru/favicon.ico) [Мой Круг](http://worklez.moikrug.ru)
-
-![](http://last.fm/favicon.ico) [last.fm](http://last.fm/user/worklez)
-
-![](http://vk.com/favicon.ico) [vk.com](http://vk.com/id727886)
+<img src="https://static-web.last.fm/static/images/favicon.ico" width="16"> [last.fm](http://last.fm/user/worklez)
 
 
 ## Записи
